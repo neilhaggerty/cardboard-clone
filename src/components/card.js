@@ -13,7 +13,7 @@ const styles = {
     width: '10em',
     border: '0.1em solid grey',
     padding: '0.5em',
-    margin: '0.5em',
+    margin: '0.5em auto',
     color: 'grey',
     textAlign: 'center'
   }

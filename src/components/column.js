@@ -1,4 +1,5 @@
 import React from 'react'
+import Dragula from 'react-dragula';
 import Card from './card'
 
 class Column extends React.Component {
@@ -22,11 +23,19 @@ class Column extends React.Component {
       }
   }
 
+
+  dragulaDecorator = (componentBackingInstance) => {
+    if (componentBackingInstance) {
+      let options = {};
+      Dragula([componentBackingInstance], options)
+    }
+  }
+
   render() {
     return (
       <div style={styles.column} className="column">
         <div style={styles.header}>{this.props.text}</div>
-        <div>
+        <div ref={this.dragulaDecorator}>
           {this.renderCards(this.props.cards)}
           <input
             style={styles.input}
@@ -56,8 +65,9 @@ const styles = {
   input: {
     width: '10em',
     padding: '0.5em',
-    margin: '0.5em',
-    textAlign: 'center'
+    margin: '0.5em auto',
+    textAlign: 'center',
+    display: 'block'
   }
 }
 

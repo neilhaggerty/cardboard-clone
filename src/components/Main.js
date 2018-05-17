@@ -1,9 +1,9 @@
 import 'normalize.css/normalize.css';
 import 'styles/App.css';
-import Column from './column';
 import React from 'react';
+import Dragula from 'react-dragula';
+import Column from './column';
 import ColumnCreator from './columnCreator';
-
 
 class AppComponent extends React.Component {
   constructor() {
@@ -58,7 +58,7 @@ class AppComponent extends React.Component {
     let board = {...this.state.board}
     board.columns.push({position: colPosition, text: columnTitle, cards: []})
     this.setState({board})
-  }
+  }  
 
   render() {
     return (

@@ -42,8 +42,9 @@ const styles = {
   input: {
     width: '10em',
     padding: '0.5em',
-    margin: '0.5em',
-    textAlign: 'center'
+    margin: '0.5em auto',
+    textAlign: 'center',
+    display: 'block'
   }
 }
 
